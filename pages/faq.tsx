@@ -1,4 +1,5 @@
 import Link from "../src/components/Link";
+import PageTitle from "../src/components/PageTitle";
 
 //Funções estaticas x dinamicas de SSR (Server Side Render)
 //Em modo dev ambas as funções sempre rodam a cada acesso
@@ -26,6 +27,7 @@ export async function getStaticProps() {
 export default function FAQPage({ faq }) {
     return(
         <div>
+            <PageTitle>FAQ - Alura Case Campanha</PageTitle>
             <h1>FAQ</h1>
             <Link href="/">Ir para a página Home</Link>
             <ul>
