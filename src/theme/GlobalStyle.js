@@ -10,6 +10,7 @@ export default function GlobalStyle() {
         }
         a {
           text-decoration: none;
+          /* color: #724BB7; */
         }
         body {
           font-family: ${theme.typography.fontFamily}, sans-serif;

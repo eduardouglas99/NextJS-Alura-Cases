@@ -1,11 +1,15 @@
-import Link from "../src/components/Link";
-import PageTitle from "../src/components/PageTitle";
+// import Link from "../src/components/Link";
+// import PageTitle from "../src/components/PageTitle";
+
+import FAQScreen from '../src/screens/FAQScreen';
 
 //Funções estaticas x dinamicas de SSR (Server Side Render)
 //Em modo dev ambas as funções sempre rodam a cada acesso
 
 // export async function getStaticProps() {}
 // A função getServerSideProps() {} roda a cada acesso
+
+export default FAQScreen
 
 export async function getStaticProps() {
     // A função getStaticProps roda somente em tempo de build
@@ -24,22 +28,22 @@ export async function getStaticProps() {
     };
 }
 
-export default function FAQPage({ faq }) {
-    return(
-        <div>
-            <PageTitle>FAQ - Alura Case Campanha</PageTitle>
-            <h1>FAQ</h1>
-            <Link href="/">Ir para a página Home</Link>
-            <ul>
-                {faq.map(({answer, question}) => (
-                    <li key={question}>
-                        <article>
-                            <h2>{question}</h2>
-                            <p>{answer}</p>
-                        </article>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    )
-}
+// export default function FAQPage({ faq }) {
+//     return(
+//         <div>
+//             <PageTitle>FAQ - Alura Case Campanha</PageTitle>
+//             <h1>FAQ</h1>
+//             <Link href="/">Ir para a página Home</Link>
+//             <ul>
+//                 {faq.map(({answer, question}) => (
+//                     <li key={question}>
+//                         <article>
+//                             <h2>{question}</h2>
+//                             <p>{answer}</p>
+//                         </article>
+//                     </li>
+//                 ))}
+//             </ul>
+//         </div>
+//     )
+// }
